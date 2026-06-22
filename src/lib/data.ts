@@ -62,24 +62,46 @@ export const profile = {
 
 export const pinnedProjects = [
   {
-    icon: "map",
-    iconColor: "text-primary",
-    title: "Map Pin Board 📍",
+    emoji: "💡",
+    title: "QuotePilotBase",
     badge: "Public",
-    description:
-      "A modern React TypeScript application for managing location pins with a clean interface and persistent storage.",
-    language: "TypeScript",
+    description: "SaaS application for generating and managing quotes with a modern dashboard, user authentication, and PostgreSQL backend.",
+    tech: ["TypeScript", "Node.js", "PostgreSQL", "Railway"],
     languageDot: "bg-primary",
+    language: "TypeScript",
+    repo: "https://github.com/mohini3493/quotepilotbase",
+    demo: "https://quotepilotbase.up.railway.app",
   },
   {
-    icon: "shopping_cart",
-    iconColor: "text-tertiary",
-    title: "E-commerce Specialist",
+    emoji: "📍",
+    title: "Map Pin Board",
     badge: "Public",
-    description:
-      "Successfully integrated e-commerce features into 20+ websites using Shopify, WooCommerce, and Magento.",
-    language: "CMS Specialist",
+    description: "Interactive location pin management app with a clean interface, persistent storage, and geolocation features.",
+    tech: ["React", "TypeScript", "Netlify"],
+    languageDot: "bg-primary",
+    language: "TypeScript",
+    repo: "https://github.com/mohini3493/map-pin-board",
+    demo: "https://map-pin-board.netlify.app",
+  },
+  {
+    emoji: "🛒",
+    title: "Direct Pallet",
+    badge: "Public",
+    description: "Custom Shopify theme for modern e-commerce with clean design, optimized performance, and mobile-first approach.",
+    tech: ["Shopify", "Liquid"],
     languageDot: "bg-tertiary",
+    language: "Liquid",
+    repo: "https://github.com/mohini3493/direct-pallet",
+  },
+  {
+    emoji: "🔌",
+    title: "Custom Post Plugin",
+    badge: "Public",
+    description: "WordPress plugin for custom post type and user management with an intuitive admin interface.",
+    tech: ["WordPress", "PHP"],
+    languageDot: "bg-secondary",
+    language: "PHP",
+    repo: "https://github.com/mohini3493/Custom-User-Post-Plugin",
   },
 ];
 
@@ -188,11 +210,25 @@ export const contacts = [
 
 export const navLinks = [
   { label: "Experience", href: "/" },
+  { label: "About Me", href: "/about" },
   { label: "Shopify", href: "/shopify-experience" },
   { label: "ReactJS", href: "/reactjs-experience" },
   { label: "WordPress", href: "/wordpress-experience" },
-  { label: "Insights", href: "#" },
+  { label: "Insights", href: "/insights" },
   { label: "Archive", href: "#" },
+];
+
+export const aboutLines = [
+  { emoji: "💼", text: "Currently working as Frontend-Focused Full Stack Developer at Digiligo, Bangalore" },
+  { emoji: "🌍", text: "Based in Bengaluru, Karnataka, India IN" },
+  { emoji: "🧱", text: "8+ years of experience crafting scalable, beautiful web experiences" },
+  { emoji: "⚡", text: "Specializing in React.js, Next.js, TypeScript and SaaS web apps & ecommerce" },
+  { emoji: "🧰", text: "Expert in WordPress · Shopify · Webflow & Wix solutions" },
+  { emoji: "🤖", text: "Exploring AI & Prompt Engineering — certified by DeepLearning.AI" },
+  { emoji: "🌐", text: "Remote Work Champion — delivering excellence from anywhere" },
+  { emoji: "🎓", text: "Graduated from Gujarat Technological University (CGPA: 8.44/10)" },
+  { emoji: "🗣️", text: "Speak: English · Hindi · Gujarati" },
+  { emoji: "📧", text: "mohini.inboxme@gmail.com" },
 ];
 
 export const shopifySummary = [
@@ -506,4 +542,43 @@ export const wordpressExpertise = [
   { skill: "Performance & Caching (Redis/CDN)", level: 91 },
   { skill: "Security Hardening", level: 86 },
   { skill: "Multisite & Enterprise Architecture", level: 83 },
+];
+
+export const blogPosts = [
+  {
+    title: "How to Use Claude Code for Free in 2026 Using Minimax M2.5 and OpenCode",
+    description:
+      "Artificial Intelligence is transforming how developers write, test, and ship software. In 2026, AI-powered coding agents are no longer a luxury — here's how to get started for free.",
+    date: "May 14, 2025",
+    tags: ["AI", "Claude Code", "Developer Tools"],
+    image: "https://miro.medium.com/v2/resize:fit:1200/1*o8rcpWIjw7JjFP8ctuO0qQ.png",
+    url: "https://medium.com/@mohini3493/how-to-use-claude-code-for-free-in-2026-using-minimax-m2-5-and-opencode-complete-setup-guide-aad5dc48ae9d",
+  },
+  {
+    title: "How to Edit the Meta of Collections Page in Shopify",
+    description:
+      "Shopify automatically generates a /collections page which isn't accessible anywhere on the dashboard. Learn how to customize the meta title and description for SEO.",
+    date: "Dec 10, 2024",
+    tags: ["Shopify", "SEO", "E-commerce"],
+    image: "https://miro.medium.com/v2/resize:fit:1200/1*O0JsnbyvFB3BBKd7raBfXA.png",
+    url: "https://medium.com/@mohini3493/how-to-edit-the-meta-of-collections-page-414796e9a598",
+  },
+  {
+    title: "MySQL is Not Starting in XAMPP — How to Fix It?",
+    description:
+      "If you are using XAMPP and suddenly MySQL is not starting while only Apache is running, here's a step-by-step guide to diagnose and fix the issue.",
+    date: "Dec 30, 2021",
+    tags: ["MySQL", "XAMPP", "Debugging"],
+    image: "https://miro.medium.com/v2/resize:fit:744/1*_QOxsmVtrbTCHCHuOTaC0w.png",
+    url: "https://medium.com/@mohini3493/mysql-is-not-staring-in-xampp-how-to-fix-it-a3d8059c0528",
+  },
+  {
+    title: "How to Setup Wordfence Plugin for Security",
+    description:
+      "A complete walkthrough on installing and configuring the Wordfence security plugin to protect your WordPress site from threats and vulnerabilities.",
+    date: "Jan 7, 2019",
+    tags: ["WordPress", "Security", "Plugin"],
+    image: "https://miro.medium.com/v2/resize:fit:1033/1*sx-opo7AetjHvU1ZRy_75A.png",
+    url: "https://medium.com/@mohini3493/how-to-setup-wordfence-plugin-for-security-purpose-2b8641b2521d",
+  },
 ];
