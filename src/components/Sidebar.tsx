@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { profile } from "@/lib/data";
+import TechStack from "./TechStack";
 
 export default function Sidebar() {
   return (
@@ -60,21 +61,7 @@ export default function Sidebar() {
         ))}
       </div>
 
-      <div className="pt-6 border-t border-outline-variant">
-        <h3 className="font-mono text-label-caps uppercase tracking-wider text-on-surface-variant mb-4">
-          Core Stack
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {profile.stack.map((tech) => (
-            <span
-              key={tech.name}
-              className={`px-2 py-1 bg-surface-container border border-outline-variant rounded-sm font-mono text-code-sm ${tech.color}`}
-            >
-              {tech.name}
-            </span>
-          ))}
-        </div>
-      </div>
+      <TechStack />
     </aside>
   );
 }

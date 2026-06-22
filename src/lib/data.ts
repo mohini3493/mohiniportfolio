@@ -1,8 +1,7 @@
 export const profile = {
   name: "Mohiniba Jadeja",
   username: "@mohini3493",
-  avatar:
-    "https://lh3.googleusercontent.com/aida/ADBb0ugF3sBK6eoVzED8MlK5QuFRTYtsuoB8FCz2Eqvhv1YJL4LDbtYOv3WRDs5sle1QdtGP5QNdz7XGZfO-AUNPZKUwZiz-Iu_JSVKYoN4MdWljSt08bk8EsikTgeqGqS34BkdI-hPfvJtBSRjCuKDndJa0KJGie33z0mFJeeOZnCFi_DtMzAxC7xURt_gFJUJSvIVWKZlAgRM_2STwp6I8TaoBQjA2b9_Vuu5AlOSI2QbNC6hyOLqqLx1FqOg",
+  avatar: "/avatar.jpeg",
   bio: "Experienced Frontend Developer & Website Expert with 8+ years in building and optimizing responsive websites and web applications. Passionate about creating impactful digital experiences.",
   details: [
     { icon: "terminal", text: "8+ Years Experience" },
@@ -13,14 +12,51 @@ export const profile = {
       href: "https://github.com/mohini3493",
     },
   ],
-  stack: [
-    { name: "React", color: "text-primary" },
-    { name: "Next.js", color: "text-primary" },
-    { name: "TypeScript", color: "text-secondary" },
-    { name: "Tailwind CSS", color: "text-primary" },
-    { name: "WordPress", color: "text-on-surface" },
-    { name: "Shopify", color: "text-tertiary" },
-  ],
+  stack: {
+    "Frontend": [
+      { name: "React", icon: "SiReact", color: "#61DAFB" },
+      { name: "Next.js", icon: "SiNextdotjs", color: "#ffffff" },
+      { name: "TypeScript", icon: "SiTypescript", color: "#3178C6" },
+      { name: "JavaScript", icon: "SiJavascript", color: "#F7DF1E" },
+      { name: "HTML5", icon: "SiHtml5", color: "#E34F26" },
+      { name: "CSS3", icon: "SiCss", color: "#1572B6" },
+      { name: "Tailwind CSS", icon: "SiTailwindcss", color: "#06B6D4" },
+      { name: "Bootstrap", icon: "SiBootstrap", color: "#7952B3" },
+      { name: "Sass", icon: "SiSass", color: "#CC6699" },
+    ],
+    "UI & Design": [
+      { name: "Figma", icon: "SiFigma", color: "#F24E1E" },
+      { name: "Adobe XD", icon: "TbBrandAdobe", color: "#FF61F6" },
+      { name: "Framer Motion", icon: "SiFramer", color: "#0055FF" },
+      { name: "ShadCN UI", icon: "SiShadcnui", color: "#ffffff" },
+    ],
+    "CMS & E-Commerce": [
+      { name: "WordPress", icon: "SiWordpress", color: "#21759B" },
+      { name: "Shopify", icon: "SiShopify", color: "#7AB55C" },
+      { name: "Webflow", icon: "SiWebflow", color: "#4353FF" },
+      { name: "Wix", icon: "SiWix", color: "#0C6EFC" },
+      { name: "Liquid", icon: "SiShopify", color: "#7AB55C" },
+    ],
+    "Backend & Database": [
+      { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
+      { name: "Express", icon: "SiExpress", color: "#ffffff" },
+      { name: "PHP", icon: "SiPhp", color: "#777BB4" },
+      { name: "MySQL", icon: "SiMysql", color: "#4479A1" },
+      { name: "PostgreSQL", icon: "SiPostgresql", color: "#4169E1" },
+    ],
+    "DevOps & Hosting": [
+      { name: "AWS", icon: "FaAws", color: "#FF9900" },
+      { name: "Docker", icon: "SiDocker", color: "#2496ED" },
+      { name: "Vercel", icon: "SiVercel", color: "#ffffff" },
+      { name: "Netlify", icon: "SiNetlify", color: "#00C7B7" },
+      { name: "GitHub Actions", icon: "SiGithubactions", color: "#2088FF" },
+      { name: "Vite", icon: "SiVite", color: "#646CFF" },
+    ],
+    "AI Tools": [
+      { name: "Claude", icon: "SiAnthropic", color: "#D97757" },
+      { name: "GitHub Copilot", icon: "SiGithubcopilot", color: "#ffffff" },
+    ],
+  },
 };
 
 export const pinnedProjects = [
@@ -142,27 +178,66 @@ export const shopifyCoreExpertise = [
 
 export const shopifyTechnicalSkills = {
   "Shopify Ecosystem": [
-    "Shopify Plus", "Shopify 2.0", "Shopify Liquid", "Shopify Hydrogen",
-    "Checkout Extensions", "Shopify Markets", "Shopify Flow", "Shopify Functions",
-    "Shopify Admin API", "Storefront API", "Metafields", "Metaobjects",
+    "Shopify Plus",
+    "Shopify 2.0",
+    "Shopify Liquid",
+    "Shopify Hydrogen",
+    "Checkout Extensions",
+    "Shopify Markets",
+    "Shopify Flow",
+    "Shopify Functions",
+    "Shopify Admin API",
+    "Storefront API",
+    "Metafields",
+    "Metaobjects",
   ],
   "Frontend Development": [
-    "HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React.js",
-    "Next.js", "Tailwind CSS", "Bootstrap", "jQuery",
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES6+)",
+    "TypeScript",
+    "React.js",
+    "Next.js",
+    "Tailwind CSS",
+    "Bootstrap",
+    "jQuery",
   ],
   "Ecommerce Features": [
-    "Bundle Builders", "Subscription Products", "Product Configurators",
-    "Custom Pricing Logic", "Personalized Experiences", "Product Recommendations",
-    "Upsell & Cross-sell", "Multi-Currency Stores", "Multi-Market Stores",
+    "Bundle Builders",
+    "Subscription Products",
+    "Product Configurators",
+    "Custom Pricing Logic",
+    "Personalized Experiences",
+    "Product Recommendations",
+    "Upsell & Cross-sell",
+    "Multi-Currency Stores",
+    "Multi-Market Stores",
   ],
-  "Integrations": [
-    "Payment Gateway", "Shipping & Tax Setup", "CRM Integration",
-    "Email Marketing", "ERP Integration", "Third-Party APIs",
-    "Zapier Automation", "AI Tool Integration",
+  Integrations: [
+    "Payment Gateway",
+    "Shipping & Tax Setup",
+    "CRM Integration",
+    "Email Marketing",
+    "ERP Integration",
+    "Third-Party APIs",
+    "Zapier Automation",
+    "AI Tool Integration",
   ],
   "Tools & Platforms": [
-    "Git", "GitHub", "GitLab", "Bitbucket", "Jira", "Trello", "AWS",
-    "cPanel", "Klaviyo", "Rebuy", "Recharge", "Razorpay", "Stripe", "PayPal",
+    "Git",
+    "GitHub",
+    "GitLab",
+    "Bitbucket",
+    "Jira",
+    "Trello",
+    "AWS",
+    "cPanel",
+    "Klaviyo",
+    "Rebuy",
+    "Recharge",
+    "Razorpay",
+    "Stripe",
+    "PayPal",
   ],
 };
 
@@ -221,7 +296,11 @@ export const reactProjects = [
     description:
       "Architected and shipped a 60+ component design system with Storybook documentation, theme tokens, accessibility compliance, and automated visual regression testing.",
     tech: ["React", "TypeScript", "Storybook", "Radix UI", "Tailwind CSS"],
-    metrics: { users: "60+ Components", perf: "100% A11y", bundle: "Tree-shakeable" },
+    metrics: {
+      users: "60+ Components",
+      perf: "100% A11y",
+      bundle: "Tree-shakeable",
+    },
   },
   {
     title: "SaaS Project Management Tool",
@@ -253,7 +332,11 @@ export const reactProjects = [
     description:
       "Created a dynamic form builder with conditional logic, validation schemas, file uploads, and PDF generation — used across 3 enterprise clients for onboarding flows.",
     tech: ["React", "React Hook Form", "Zod", "TypeScript", "jsPDF"],
-    metrics: { users: "3 Enterprise Clients", perf: "0 Runtime Errors", bundle: "Modular" },
+    metrics: {
+      users: "3 Enterprise Clients",
+      perf: "0 Runtime Errors",
+      bundle: "Modular",
+    },
   },
 ];
 
@@ -275,7 +358,11 @@ export const wordpressProjects = [
     description:
       "Architected a WordPress multisite network for a corporate group managing 12 brand websites with shared user management, centralized updates, and domain mapping.",
     tech: ["WordPress Multisite", "PHP", "REST API", "Nginx"],
-    metrics: { sites: "12 Sub-sites", speed: "1.1s Load", uptime: "99.9% Uptime" },
+    metrics: {
+      sites: "12 Sub-sites",
+      speed: "1.1s Load",
+      uptime: "99.9% Uptime",
+    },
   },
   {
     title: "High-traffic News & Magazine Portal",
@@ -283,7 +370,11 @@ export const wordpressProjects = [
     description:
       "Built a content-heavy news portal handling 500K+ monthly visitors with custom post types, advanced caching layers, AMP pages, and real-time push notifications.",
     tech: ["WordPress", "Advanced Custom Fields", "Redis", "Cloudflare"],
-    metrics: { sites: "500K+ Monthly Visitors", speed: "0.9s TTFB", uptime: "CDN Optimized" },
+    metrics: {
+      sites: "500K+ Monthly Visitors",
+      speed: "0.9s TTFB",
+      uptime: "CDN Optimized",
+    },
   },
   {
     title: "WooCommerce Fashion Marketplace",
@@ -299,7 +390,11 @@ export const wordpressProjects = [
     description:
       "Created a modular WordPress theme framework with Gutenberg block library, theme.json configuration, full-site editing support, and developer-friendly starter templates.",
     tech: ["WordPress FSE", "PHP", "Block Editor", "theme.json"],
-    metrics: { sites: "800+ Downloads", speed: "96 Lighthouse", uptime: "FSE Ready" },
+    metrics: {
+      sites: "800+ Downloads",
+      speed: "96 Lighthouse",
+      uptime: "FSE Ready",
+    },
   },
   {
     title: "Real Estate Listings Platform",
@@ -307,7 +402,11 @@ export const wordpressProjects = [
     description:
       "Built a real estate platform with interactive map search, advanced property filters, mortgage calculators, virtual tour integration, and IDX/MLS data sync.",
     tech: ["WordPress", "ACF Pro", "Google Maps API", "REST API"],
-    metrics: { sites: "2K+ Listings", speed: "1.0s Load", uptime: "Map Search" },
+    metrics: {
+      sites: "2K+ Listings",
+      speed: "1.0s Load",
+      uptime: "Map Search",
+    },
   },
   {
     title: "LMS & Online Course Platform",
@@ -315,7 +414,11 @@ export const wordpressProjects = [
     description:
       "Developed an online learning platform with course management, progress tracking, quizzes, certificates, membership tiers, and WooCommerce subscriptions for payments.",
     tech: ["WordPress", "LearnDash", "WooCommerce", "BuddyBoss"],
-    metrics: { sites: "5K+ Students", speed: "1.2s Load", uptime: "Membership Tiers" },
+    metrics: {
+      sites: "5K+ Students",
+      speed: "1.2s Load",
+      uptime: "Membership Tiers",
+    },
   },
   {
     title: "Headless WordPress + React Frontend",
@@ -323,7 +426,11 @@ export const wordpressProjects = [
     description:
       "Decoupled WordPress as a headless CMS with WPGraphQL, powering a React frontend with static generation, preview mode, and incremental content updates.",
     tech: ["WordPress", "WPGraphQL", "Next.js", "Vercel"],
-    metrics: { sites: "Headless CMS", speed: "0.4s LCP", uptime: "ISR Enabled" },
+    metrics: {
+      sites: "Headless CMS",
+      speed: "0.4s LCP",
+      uptime: "ISR Enabled",
+    },
   },
   {
     title: "Custom Plugin Suite for Enterprise",
@@ -331,7 +438,11 @@ export const wordpressProjects = [
     description:
       "Developed a suite of 5 custom WordPress plugins for an enterprise client — CRM integration, custom reporting dashboard, role-based workflows, audit logging, and API gateway.",
     tech: ["PHP", "WordPress Plugin API", "REST API", "MySQL"],
-    metrics: { sites: "5 Plugins", speed: "Enterprise Grade", uptime: "Audit Compliant" },
+    metrics: {
+      sites: "5 Plugins",
+      speed: "Enterprise Grade",
+      uptime: "Audit Compliant",
+    },
   },
 ];
 
