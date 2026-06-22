@@ -1,4 +1,31 @@
+"use client";
+
 import { pinnedProjects } from "@/lib/data";
+import {
+  SiTypescript,
+  SiNodedotjs,
+  SiPostgresql,
+  SiRailway,
+  SiReact,
+  SiNetlify,
+  SiShopify,
+  SiWordpress,
+  SiPhp,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
+
+const techIcons: Record<string, { icon: IconType; color: string }> = {
+  TypeScript: { icon: SiTypescript, color: "#3178C6" },
+  "Node.js": { icon: SiNodedotjs, color: "#339933" },
+  PostgreSQL: { icon: SiPostgresql, color: "#4169E1" },
+  Railway: { icon: SiRailway, color: "#ffffff" },
+  React: { icon: SiReact, color: "#61DAFB" },
+  Netlify: { icon: SiNetlify, color: "#00C7B7" },
+  Shopify: { icon: SiShopify, color: "#7AB55C" },
+  Liquid: { icon: SiShopify, color: "#7AB55C" },
+  WordPress: { icon: SiWordpress, color: "#21759B" },
+  PHP: { icon: SiPhp, color: "#777BB4" },
+};
 
 export default function PinnedHighlights() {
   return (
@@ -35,14 +62,19 @@ export default function PinnedHighlights() {
             </p>
 
             <div className="flex flex-wrap gap-1.5 mb-4">
-              {project.tech.map((t) => (
-                <span
-                  key={t}
-                  className="px-2 py-0.5 bg-surface-high border border-outline-variant rounded-sm font-mono text-code-sm text-on-surface-variant"
-                >
-                  {t}
-                </span>
-              ))}
+              {project.tech.map((t) => {
+                const entry = techIcons[t];
+                const Icon = entry?.icon;
+                return (
+                  <span
+                    key={t}
+                    className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-surface-high border border-outline-variant rounded-sm font-mono text-code-sm text-on-surface-variant"
+                  >
+                    {Icon && <Icon size={11} style={{ color: entry.color }} />}
+                    {t}
+                  </span>
+                );
+              })}
             </div>
 
             <div className="flex items-center justify-between pt-3 border-t border-outline-variant">
