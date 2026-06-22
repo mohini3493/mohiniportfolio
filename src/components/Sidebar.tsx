@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { profile } from "@/lib/data";
-import TechStack from "./TechStack";
 
 export default function Sidebar() {
   return (
@@ -61,7 +60,6 @@ export default function Sidebar() {
         ))}
       </div>
 
-      <TechStack />
     </aside>
   );
 }

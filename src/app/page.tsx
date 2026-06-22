@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import PinnedHighlights from "@/components/PinnedHighlights";
 import ContributionHeatmap from "@/components/ContributionHeatmap";
+import TechStack from "@/components/TechStack";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
         <section className="flex-1 p-4 md:p-8 space-y-12">
           <PinnedHighlights />
           <ContributionHeatmap />
+          <TechStack />
           <Experience />
           <Contact />
         </section>

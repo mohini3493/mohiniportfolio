@@ -11,10 +11,10 @@ export default function Experience() {
       <div className="space-y-0">
         {experiences.map((exp) => (
           <div
-            key={exp.company}
-            className="py-6 border-b border-outline-variant flex flex-col md:flex-row justify-between gap-4"
+            key={`${exp.company}-${exp.period}`}
+            className="py-6 border-b border-outline-variant"
           >
-            <div className="space-y-2">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
               <div className="flex items-center gap-3 flex-wrap">
                 <h3 className="font-sans text-headline-md text-primary">
                   {exp.role} @ {exp.company}
@@ -23,17 +23,33 @@ export default function Experience() {
                   {exp.period}
                 </span>
               </div>
-              <p className="max-w-xl font-sans text-body-sm text-on-surface-variant">
-                {exp.description}
-              </p>
-              <div className="flex flex-wrap gap-4 pt-2">
-                <div className="flex items-center gap-1.5">
-                  <div className={`w-3 h-3 rounded-full ${exp.tagColor}`} />
-                  <span className="font-mono text-code-sm text-on-surface-variant">
-                    {exp.tag}
+              <span className="font-mono text-code-sm text-on-surface-variant shrink-0">
+                {exp.location}
+              </span>
+            </div>
+
+            <ul className="space-y-1.5 mb-4">
+              {exp.highlights.map((point, i) => (
+                <li key={i} className="flex gap-2 items-start">
+                  <span className="text-secondary font-mono text-code-sm shrink-0 pt-0.5">
+                    +
                   </span>
-                </div>
-              </div>
+                  <span className="font-sans text-body-sm text-on-surface-variant">
+                    {point}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-2">
+              {exp.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-2 py-0.5 bg-surface-high border border-outline-variant rounded-sm font-mono text-code-sm text-on-surface-variant"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         ))}
