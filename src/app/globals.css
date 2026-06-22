@@ -87,6 +87,24 @@ body {
   border-radius: 2px;
 }
 
+@keyframes border-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-border-spin {
+  animation: border-spin 4s linear infinite;
+}
+
+@keyframes cell-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-cell-blink {
+  animation: cell-blink 2.5s ease-in-out infinite;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

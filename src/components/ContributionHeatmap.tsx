@@ -21,7 +21,9 @@ export default function ContributionHeatmap() {
       Array.from({ length: 7 }, (_, dayIdx) => {
         const seed = weekIdx * 7 + dayIdx + 42;
         const levelIdx = Math.floor(seededRandom(seed) * LEVELS.length);
-        return LEVELS[levelIdx];
+        const shouldBlink =
+          levelIdx >= 3 && seededRandom(seed + 999) > 0.65;
+        return { level: LEVELS[levelIdx], blink: shouldBlink, seed };
       })
     );
   }, []);
@@ -36,15 +38,26 @@ export default function ContributionHeatmap() {
           <span className="font-mono text-code-sm text-on-surface-variant">
             Frontend &amp; E-commerce Engineering Velocity
           </span>
+          <span className="flex items-center gap-1.5 font-mono text-code-sm text-secondary">
+            <span className="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            Active
+          </span>
         </div>
 
         <div className="flex gap-1 overflow-x-auto scrollbar-hide pb-2">
           {grid.map((week, weekIdx) => (
             <div key={weekIdx} className="flex flex-col gap-1">
-              {week.map((level, dayIdx) => (
+              {week.map((cell, dayIdx) => (
                 <div
                   key={dayIdx}
-                  className={`contribution-cell ${level} hover:scale-125 transition-transform duration-100`}
+                  className={`contribution-cell ${cell.level} hover:scale-125 transition-transform duration-100 ${cell.blink ? "animate-cell-blink" : ""}`}
+                  style={
+                    cell.blink
+                      ? {
+                          animationDelay: `${(seededRandom(cell.seed + 500) * 4).toFixed(1)}s`,
+                        }
+                      : undefined
+                  }
                 />
               ))}
             </div>

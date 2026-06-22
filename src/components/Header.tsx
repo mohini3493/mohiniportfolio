@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { profile, navLinks } from "@/lib/data";
 
 export default function Header() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "/") {
@@ -20,9 +24,9 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50 bg-background border-b border-outline-variant">
       <div className="flex justify-between items-center h-14 px-4 md:px-8 w-full max-w-[1280px] mx-auto">
         <div className="flex items-center gap-6">
-          <span className="font-sans text-body-lg font-extrabold tracking-tight text-on-surface uppercase">
+          <Link href="/" className="font-sans text-body-lg font-extrabold tracking-tight text-on-surface uppercase">
             MOHINIBA.DEV
-          </span>
+          </Link>
 
           <div className="hidden md:flex items-center bg-surface-container border border-outline-variant px-3 py-1 rounded-sm w-64 focus-within:w-80 transition-all">
             <span className="material-symbols-outlined text-outline text-sm mr-2">
@@ -37,19 +41,22 @@ export default function Header() {
           </div>
 
           <nav className="hidden md:flex gap-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href="#"
-                className={`font-mono text-label-caps uppercase tracking-wider ${
-                  link.active
-                    ? "text-primary border-b-2 border-primary pb-1"
-                    : "text-on-surface-variant hover:text-primary"
-                } transition-colors`}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`font-mono text-label-caps uppercase tracking-wider ${
+                    isActive
+                      ? "text-primary border-b-2 border-primary pb-1"
+                      : "text-on-surface-variant hover:text-primary"
+                  } transition-colors`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 

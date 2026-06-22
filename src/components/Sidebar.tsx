@@ -6,13 +6,14 @@ export default function Sidebar() {
     <aside className="md:w-80 md:sticky md:top-14 h-fit border-r border-outline-variant p-4 md:p-8 flex flex-col gap-6">
       <div className="flex flex-col gap-4">
         <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000" />
+          <div className="absolute -inset-1 rounded-full animate-border-spin bg-[conic-gradient(from_0deg,transparent_40%,#238636_50%,#2ea043_55%,#7bdb80_60%,transparent_70%)] opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute -inset-1 rounded-full animate-border-spin bg-[conic-gradient(from_0deg,transparent_40%,#238636_50%,#2ea043_55%,#7bdb80_60%,transparent_70%)] blur-md opacity-40 group-hover:opacity-70 transition-opacity duration-500" />
           <Image
             src={profile.avatar}
             alt={`${profile.name} Avatar`}
             width={280}
             height={280}
-            className="relative w-full aspect-square rounded-full border-2 border-outline-variant bg-surface-low object-cover shadow-2xl"
+            className="relative w-full aspect-square rounded-full border-[3px] border-surface bg-surface-low object-cover shadow-2xl"
           />
         </div>
 
